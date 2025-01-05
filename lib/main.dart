@@ -89,7 +89,7 @@ class _ToDoState extends State<ToDo> {
                           onPressed: () {
                             setState(() {
                               tasks.removeAt(index);
-                              isChecked.removeAt(index); // Remove the checkbox state too
+                              isChecked.removeAt(index); 
                             });
                           },
                         ),
