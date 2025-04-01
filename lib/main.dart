@@ -10,8 +10,8 @@ class ToDo extends StatefulWidget {
 }
 
 class _ToDoState extends State<ToDo> {
-  List<String> tasks = []; // List of strings representing tasks
-  List<bool> isChecked = []; // List to track checkbox state for each task
+  List<String> tasks = []; 
+  List<bool> isChecked = []; 
   TextEditingController taskController = TextEditingController();
 
   // Function to add task to the list
@@ -19,8 +19,8 @@ class _ToDoState extends State<ToDo> {
     if (taskController.text.isNotEmpty) {
       setState(() {
         tasks.add(taskController.text);
-        isChecked.add(false); // Default state of checkbox
-        taskController.clear(); // Clear the text field after adding task
+        isChecked.add(false); 
+        taskController.clear(); 
       });
     }
   }
@@ -28,9 +28,9 @@ class _ToDoState extends State<ToDo> {
   // Checkbox color change based on state
   Color getColor(Set<WidgetState> states) {
     if (states.contains(WidgetState.selected)) {
-      return Colors.green; // Green when checked
+      return Colors.green; 
     }
-    return Colors.white; // White when unchecked
+    return Colors.white; 
   }
 
   @override
@@ -80,8 +80,8 @@ class _ToDoState extends State<ToDo> {
                           tasks[index],
                           style: TextStyle(
                             decoration: isChecked[index]
-                                ? TextDecoration.lineThrough // Strike through when checked
-                                : TextDecoration.none, // No strike through when unchecked
+                                ? TextDecoration.lineThrough 
+                                : TextDecoration.none, 
                           ),
                         ),
                         trailing: IconButton(
